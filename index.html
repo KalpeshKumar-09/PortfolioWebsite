@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Kalpesh Kumar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="home">
+    <div id="loader">
+      <div class="loader-inner">
+        <div class="loader-logo" data-brand-logo>
+          KK<span class="dot">.</span>
+        </div>
+        <div class="loader-text">Building your experience...</div>
+        <div class="loader-bar-wrap">
+          <div class="loader-bar" id="loaderBar"></div>
+        </div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+      </div>
+    </div>
+
+    <div id="site" class="hidden">
+      <nav id="navbar">
+        <div class="nav-inner">
+          <div class="nav-logo" data-brand-logo>KK<span>.</span></div>
+          <ul class="nav-links" id="navLinks"></ul>
+          <button class="burger" id="burger" aria-label="menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu"></div>
+
+      <section id="home" class="hero">
+        <div class="hero-bg">
+          <div class="blob blob1"></div>
+          <div class="blob blob2"></div>
+          <div class="blob blob3"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-badge reveal-up" style="--d: 0.1s">
+            <span class="pulse-dot"></span>
+            <span id="heroBadge"></span>
+          </div>
+          <h1 class="hero-name reveal-up" style="--d: 0.2s">
+            <span id="heroIntro"></span>
+            <span class="gradient-text" id="heroName"></span>
+          </h1>
+          <h2 class="hero-role reveal-up" style="--d: 0.35s">
+            <span class="typed-wrap"
+              ><span id="typed"></span><span class="cursor">|</span></span
+            >
+          </h2>
+          <p class="hero-desc reveal-up" style="--d: 0.5s" id="heroDesc"></p>
+          <div
+            class="hero-actions reveal-up"
+            style="--d: 0.65s"
+            id="heroActions"
+          ></div>
+          <div
+            class="hero-stats reveal-up"
+            style="--d: 0.8s"
+            id="heroStats"
+          ></div>
+        </div>
+        <div class="hero-visual reveal-right" style="--d: 0.4s">
+          <div class="hero-card">
+            <div class="hc-header">
+              <span class="hc-dot red"></span><span class="hc-dot yellow"></span
+              ><span class="hc-dot green"></span>
+              <span class="hc-title" id="heroCardTitle"></span>
+            </div>
+            <div class="hc-code" id="heroCode"></div>
+            <div class="hc-footer" id="heroCodeTags"></div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <section id="about" class="about section-pad">
+        <div class="container">
+          <div class="section-label" id="aboutLabel"></div>
+          <div class="about-grid">
+            <div class="about-left">
+              <h2 class="section-title"><span id="aboutTitle"></span></h2>
+              <div id="aboutParagraphs"></div>
+              <div class="about-chips" id="aboutChips"></div>
+              <a
+                href="contact.html"
+                class="btn-primary"
+                style="display: inline-flex; margin-top: 1.5rem"
+                >Let's Work Together
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg
+              ></a>
+            </div>
+            <div class="about-right">
+              <div class="about-card-wrap">
+                <div class="about-img-card">
+                  <div class="img-placeholder">
+                    <svg
+                      width="64"
+                      height="64"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      opacity="0.4"
+                    >
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <p
+                      style="font-size: 12px; opacity: 0.5; margin-top: 8px"
+                      id="aboutPhotoLabel"
+                    ></p>
+                  </div>
+                </div>
+                <div class="floating-badge fb1" id="aboutBadgeOne"></div>
+                <div class="floating-badge fb2" id="aboutBadgeTwo"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills section-pad">
+        <div class="container">
+          <div class="section-label" id="skillsLabel"></div>
+          <h2 class="section-title" id="skillsTitle"></h2>
+          <p class="section-sub" id="skillsSubtitle"></p>
+          <div class="skills-grid" id="skillsGrid"></div>
+          <div class="tech-pills" id="techPills"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section-pad">
+        <div class="container">
+          <div class="section-label" id="projectsLabel"></div>
+          <h2 class="section-title" id="projectsTitle"></h2>
+          <p class="section-sub" id="projectsSubtitle"></p>
+          <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+      </section>
+
+      <section id="experience" class="experience section-pad">
+        <div class="container">
+          <div class="section-label" id="experienceLabel"></div>
+          <h2 class="section-title" id="experienceTitle"></h2>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-box">
+            <div class="cta-blob"></div>
+            <h2 id="ctaTitle"></h2>
+            <p id="ctaDesc"></p>
+            <a id="ctaButton" class="btn-white" href="contact.html"
+              >Send a Message
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="footer-logo" data-brand-logo>KK<span>.</span></div>
+            <div class="footer-links" id="footerLinks"></div>
+            <div class="footer-social" id="footerSocial"></div>
+          </div>
+          <div class="footer-bottom">
+            <p id="footerCopyright"></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

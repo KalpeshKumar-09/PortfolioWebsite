@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Kalpesh Kumar</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+
+<div id="site" class="visible">
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" data-brand-logo>KK<span>.</span></div>
+      <ul class="nav-links" id="navLinks"></ul>
+      <button class="burger" id="burger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu"></div>
+
+  <section class="contact-hero">
+    <div class="hero-bg">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+    </div>
+    <div class="container">
+      <div class="contact-hero-inner">
+        <div class="section-label reveal-up" style="--d:0.1s" id="contactLabel"></div>
+        <h1 class="contact-h1 reveal-up" style="--d:0.2s" id="contactTitle"></h1>
+        <p class="contact-hero-sub reveal-up" style="--d:0.3s" id="contactSubtitle"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section section-pad">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-up" style="--d:0.1s">
+          <h2 class="contact-info-title" id="contactInfoTitle"></h2>
+          <p class="contact-info-sub" id="contactInfoSubtitle"></p>
+          <div class="contact-methods" id="contactMethods"></div>
+          <div class="availability-badge">
+            <span class="pulse-dot"></span>
+            <span id="contactAvailability"></span>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-up" style="--d:0.25s">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                <span class="err-msg" id="nameErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="name@email.com" required>
+                <span class="err-msg" id="emailErr"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label for="type">Type of Inquiry</label>
+              <select id="type" name="type"></select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              <span class="err-msg" id="messageErr"></span>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span id="btnText">Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="btnIcon"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span class="btn-loader" id="btnLoader" style="display:none"></span>
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess" style="display:none">
+            <div class="success-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 id="successTitle"></h3>
+            <p id="successMessage"></p>
+            <button onclick="resetForm()" class="btn-ghost" style="margin-top:1rem">Send Another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo" data-brand-logo>KK<span>.</span></div>
+        <div class="footer-links" id="footerLinks"></div>
+        <div class="footer-social" id="footerSocial"></div>
+      </div>
+      <div class="footer-bottom">
+        <p id="footerCopyright"></p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

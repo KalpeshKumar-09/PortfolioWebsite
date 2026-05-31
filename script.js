@@ -418,6 +418,14 @@ function initBurger() {
   const menu = document.getElementById("mobileMenu");
   if (!burger || !menu) return;
 
+  const resetBurger = () => {
+    menu.classList.remove("open");
+    burger.querySelectorAll("span").forEach((span) => {
+      span.style.transform = "";
+      span.style.opacity = "";
+    });
+  };
+
   burger.addEventListener("click", () => {
     menu.classList.toggle("open");
     const spans = burger.querySelectorAll("span");
@@ -433,13 +441,13 @@ function initBurger() {
     }
   });
 
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) resetBurger();
+  });
+
   menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      menu.classList.remove("open");
-      burger.querySelectorAll("span").forEach((span) => {
-        span.style.transform = "";
-        span.style.opacity = "";
-      });
+      resetBurger();
     });
   });
 }
@@ -631,20 +639,4 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const offset = 80;
     window.scrollTo({ top: target.offsetTop - offset, behavior: "smooth" });
   });
-});
-
-const glow = document.createElement("div");
-glow.style.cssText = `
-  position: fixed; pointer-events: none; z-index: 9998;
-  width: 300px; height: 300px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
-  transform: translate(-50%, -50%);
-  transition: left 0.3s ease, top 0.3s ease;
-  left: -999px; top: -999px;
-`;
-document.body.appendChild(glow);
-
-document.addEventListener("mousemove", (event) => {
-  glow.style.left = `${event.clientX}px`;
-  glow.style.top = `${event.clientY}px`;
 });

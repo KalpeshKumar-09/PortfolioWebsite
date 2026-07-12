@@ -4,6 +4,7 @@
 
 const pageType = document.body.dataset.page || "home";
 let pageInitialized = false;
+const CONTACT_EMAIL = "sutharkalpesh101@gmail.com";
 
 function setText(id, value) {
   const element = document.getElementById(id);
@@ -60,6 +61,16 @@ function renderNavigation() {
   mobileMenu.innerHTML = mobileItems + mobileContact;
 }
 
+function initTheme() {
+  const toggle = document.getElementById("themeToggle");
+  localStorage.setItem("portfolio-theme", "light");
+  document.documentElement.dataset.theme = "light";
+  if (toggle) {
+    toggle.setAttribute("aria-hidden", "true");
+    toggle.tabIndex = -1;
+  }
+}
+
 function renderHomePage() {
   if (pageType !== "home") return;
 
@@ -71,10 +82,19 @@ function renderHomePage() {
 
   setHtml(
     "heroActions",
-    [
-      `<a href="${portfolioData.hero.primaryCta.href}" class="btn-primary">${portfolioData.hero.primaryCta.label} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`,
-      `<a href="${portfolioData.hero.secondaryCta.href}" class="btn-ghost"${portfolioData.hero.secondaryCta.download ? " download" : ""}>${portfolioData.hero.secondaryCta.label}</a>`
-    ].join("")
+    (() => {
+      const resumeHref = portfolioData.hero.secondaryCta.href;
+      const isExternalResume = resumeHref.startsWith("http");
+      const resumeAttrs = [
+        portfolioData.hero.secondaryCta.download ? "download" : "",
+        isExternalResume ? 'target="_blank" rel="noreferrer"' : ""
+      ].filter(Boolean).join(" ");
+
+      return [
+        `<a href="${portfolioData.hero.primaryCta.href}" class="btn-primary">${portfolioData.hero.primaryCta.label} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`,
+        `<a href="${resumeHref}" class="btn-ghost" ${resumeAttrs}>${portfolioData.hero.secondaryCta.label}</a>`
+      ].join("");
+    })()
   );
 
   setHtml(
@@ -165,6 +185,7 @@ function renderHomePage() {
               ${project.badge ? `<div class="proj-badge">${project.badge}</div>` : ""}
               <h3 class="proj-title">${project.title}</h3>
               <p class="proj-desc">${project.description}</p>
+              ${project.highlights ? `<ul class="proj-highlights">${project.highlights.map((highlight) => `<li>${highlight}</li>`).join("")}</ul>` : ""}
               <div class="proj-tags">${project.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
             </div>
           </div>
@@ -187,6 +208,7 @@ function renderHomePage() {
               <h3 class="tl-title">${item.title}</h3>
               <div class="tl-company">${item.company} • ${item.meta}</div>
               <p class="tl-desc">${item.description}</p>
+              ${item.bullets ? `<ul class="tl-bullets">${item.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}</ul>` : ""}
               <div class="tl-tags">${item.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
             </div>
           </div>
@@ -302,6 +324,7 @@ function revealSite() {
 }
 
 try {
+  initTheme();
   safeRenderSiteContent();
 } catch (error) {
   console.error("Portfolio render failed:", error);
@@ -537,6 +560,8 @@ function initContactForm() {
   const success = document.getElementById("formSuccess");
   if (!form) return;
 
+  form.action = `https://formsubmit.co/${CONTACT_EMAIL}`;
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!validateForm()) return;
@@ -551,11 +576,7 @@ function initContactForm() {
     if (btnIcon) btnIcon.style.display = "none";
     if (btnLoader) btnLoader.style.display = "inline-block";
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    form.style.display = "none";
-    success.style.display = "block";
-    success.style.animation = "fadeIn 0.5s ease";
+    form.submit();
   });
 
   ["name", "email", "message"].forEach((id) => {

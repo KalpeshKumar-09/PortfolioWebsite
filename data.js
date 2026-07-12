@@ -23,35 +23,35 @@ const portfolioData = {
     name: "Kalpesh Kumar",
     typedPhrases: [
       "Frontend Developer",
-      "React Developer",
+      "Full Stack Developer",
+      "React.js Developer",
       "TypeScript Developer",
-      "UI Builder",
-      "Problem Solver"
+      "MERN Stack Learner"
     ],
     description:
-      "I build responsive websites, dashboards, and applications with React, TypeScript, and modern frontend tools, with a strong focus on usability, clean UI, and performance.",
+      "Frontend-focused developer open to Frontend and Full Stack roles. I build responsive React.js, TypeScript, and React Native interfaces with clean UI, REST API integration, and practical product thinking.",
     primaryCta: {
       label: "View My Work",
       href: "#projects"
     },
     secondaryCta: {
-      label: "Download Resume",
-      href: "Kalpesh_Kumar_Resume.pdf",
-      download: true
+      label: "View Resume",
+      href: "https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view?usp=sharing",
+      download: false
     },
     stats: [
-      { value: "3", label: "Relevant Roles" },
-      { value: "2", label: "Key Projects" },
-      { value: "8+", label: "Core Technologies" }
+      { value: "Frontend", label: "Primary Role" },
+      { value: "Full Stack", label: "Also Interested" },
+      { value: "React + APIs", label: "Core Skill" }
     ],
     codeLines: [
       { indent: "", content: '<span class="c-kw">const</span> <span class="c-fn">Developer</span> = () =&gt; {' },
       { indent: "pad", content: '  <span class="c-kw">return</span> (' },
-      { indent: "pad2", content: '    &lt;<span class="c-tag">Frontend</span> <span class="c-attr">focus</span>=<span class="c-str">"products"</span>&gt;' },
-      { indent: "pad3", content: '      <span class="c-str">// build responsive interfaces</span>' },
-      { indent: "pad3", content: '      <span class="c-str">// connect APIs cleanly</span>' },
-      { indent: "pad3", content: '      <span class="c-str">// ship reliable user experiences</span>' },
-      { indent: "pad2", content: '    &lt;/<span class="c-tag">Frontend</span>&gt;' },
+      { indent: "pad2", content: '    &lt;<span class="c-tag">Profile</span> <span class="c-attr">stack</span>=<span class="c-str">"React + TypeScript"</span>&gt;' },
+      { indent: "pad3", content: '      <span class="c-str">// reusable components</span>' },
+      { indent: "pad3", content: '      <span class="c-str">// REST API integration</span>' },
+      { indent: "pad3", content: '      <span class="c-str">// web and mobile UI</span>' },
+      { indent: "pad2", content: '    &lt;/<span class="c-tag">Profile</span>&gt;' },
       { indent: "pad", content: '  );' },
       { indent: "", content: "};" }
     ],
@@ -59,46 +59,60 @@ const portfolioData = {
   },
   about: {
     sectionLabel: "About Me",
-    title: "Building web experiences that feel smooth, fast, and useful",
+    title: "Clean frontend interfaces with reliable product flows",
     paragraphs: [
-      "I'm a frontend developer based in Rajasthan, India, with hands-on experience building dashboards, business websites, and application interfaces using React, TypeScript, and modern UI frameworks.",
-      "Across agency and product teams, I've worked on reusable components, API integrations, debugging, and performance improvements while collaborating closely with designers and backend developers."
+      "I'm Kalpesh Kumar, a Computer Science graduate from Manipal University Jaipur with professional experience at Itech Solutions Pvt Ltd and Marwad Tech Pvt Ltd.",
+      "My work includes responsive dashboards, job portals, file management products, authentication flows, CRUD interfaces, data visualization screens, offline-first features, and performance-focused frontend improvements."
     ],
     chips: [
       "Rajasthan, India",
       "Open to Remote",
+      "React.js + TypeScript",
+      "React Native",
       "Available for Frontend Roles"
     ],
     photoLabel: "Kalpesh Kumar",
-    badges: ["React + TypeScript", "API-Driven UI"]
+    badges: ["CGPA 7.50", "React + TypeScript"]
   },
   skills: {
     sectionLabel: "What I Know",
     title: "My Tech Stack",
-    subtitle: "Technologies and tools I use to build production-ready frontend experiences",
+    subtitle: "Tools I use for responsive web apps, mobile interfaces, dashboards, and API-driven screens.",
     categories: [
       {
         title: "Frontend",
         icon: "🎨",
         items: [
-          { name: "HTML", level: 92 },
-          { name: "CSS", level: 88 },
+          { name: "HTML5", level: 92 },
+          { name: "CSS3", level: 88 },
           { name: "JavaScript", level: 86 },
           { name: "TypeScript", level: 82 },
-          { name: "React", level: 88 },
-          { name: "React Native", level: 72 }
+          { name: "React.js", level: 88 },
+          { name: "React Native", level: 76 }
         ]
       },
       {
-        title: "Tools & Libraries",
+        title: "Libraries & Tools",
         icon: "🛠️",
         items: [
           { name: "Tailwind CSS", level: 84 },
           { name: "Bootstrap", level: 80 },
           { name: "Material UI", level: 78 },
-          { name: "Git & GitHub", level: 82 },
-          { name: "REST APIs", level: 85 },
-          { name: "Microsoft Office", level: 70 }
+          { name: "Redux Toolkit", level: 76 },
+          { name: "Axios", level: 84 },
+          { name: "Git & GitHub", level: 82 }
+        ]
+      },
+      {
+        title: "Development Strengths",
+        icon: "⚡",
+        items: [
+          { name: "REST API Integration", level: 86 },
+          { name: "Responsive Web Apps", level: 90 },
+          { name: "Cross-Browser Compatibility", level: 82 },
+          { name: "UI/UX Implementation", level: 86 },
+          { name: "Performance Optimization", level: 80 },
+          { name: "Debugging", level: 84 }
         ]
       }
     ],
@@ -108,25 +122,37 @@ const portfolioData = {
       "JavaScript",
       "TypeScript",
       "React",
+      "React.js",
       "React Native",
       "Tailwind CSS",
       "Bootstrap",
       "Material UI",
+      "Redux Toolkit",
+      "Axios",
       "Git",
       "GitHub",
-      "REST APIs"
+      "Postman",
+      "REST APIs",
+      "Responsive UI",
+      "Debugging"
     ]
   },
   projects: {
     sectionLabel: "What I've Built",
     title: "Featured Projects",
-    subtitle: "Selected work based on the projects highlighted in my resume",
+    subtitle: "Selected work across React, TypeScript, REST APIs, dashboards, and mobile-ready interfaces.",
     items: [
       {
         title: "Career Setu",
         description:
-          "A job platform frontend built from scratch with React and TypeScript where users can browse jobs, apply, and track their activity through a dedicated dashboard.",
-        tags: ["React", "TypeScript", "REST APIs"],
+          "Responsive job portal for web and mobile workflows where users can browse, search, apply for jobs, and track applications through a focused dashboard.",
+        highlights: [
+          "Built reusable React.js and TypeScript UI components from UI/UX designs.",
+          "Integrated REST APIs for job listings, authentication, and application submissions.",
+          "Created a dashboard for application status, recent activity, and user tracking.",
+          "Improved performance through efficient state handling and API usage."
+        ],
+        tags: ["React.js", "TypeScript", "REST APIs", "Dashboard"],
         liveUrl: "#",
         githubUrl: "#",
         featured: true,
@@ -136,8 +162,14 @@ const portfolioData = {
       {
         title: "Team Vault",
         description:
-          "A file manager dashboard with online and offline support, storage insights, and fast access to files, designed to keep the experience usable even without connectivity.",
-        tags: ["React", "TypeScript", "Offline Sync"],
+          "File management solution across web and mobile platforms with consistent dashboards, reusable components, and offline-first access.",
+        highlights: [
+          "Developed web and mobile interfaces with React.js, React Native, and TypeScript.",
+          "Built responsive dashboards for a consistent Android, iOS, and web experience.",
+          "Implemented offline support so users can access files without internet.",
+          "Added automatic sync behavior when connectivity returns."
+        ],
+        tags: ["React Native", "TypeScript", "Offline Sync", "Mobile App"],
         liveUrl: "#",
         githubUrl: "#",
         featured: false,
@@ -146,8 +178,13 @@ const portfolioData = {
       {
         title: "Responsive Dashboard Work",
         description:
-          "Client-focused dashboard and application interfaces built during professional roles, including API integrations, CRUD flows, authentication, and data visualization UI.",
-        tags: ["React", "Dashboards", "UI Engineering"],
+          "Professional frontend work across client websites, dashboards, CRUD flows, authentication screens, and data visualization interfaces.",
+        highlights: [
+          "Converted UI/UX designs into scalable, reusable frontend components.",
+          "Integrated APIs and collaborated with backend teams on feature delivery.",
+          "Fixed UI bugs, broken layouts, and browser compatibility issues."
+        ],
+        tags: ["React", "Dashboards", "CRUD", "Authentication"],
         liveUrl: "#",
         githubUrl: "#",
         featured: false,
@@ -156,7 +193,7 @@ const portfolioData = {
     ]
   },
   experience: {
-    sectionLabel: "My Journey",
+    sectionLabel: "Resume",
     title: "Experience & Education",
     items: [
       {
@@ -165,7 +202,13 @@ const portfolioData = {
         company: "Itech Solutions Pvt Ltd",
         meta: "Full-time",
         description:
-          "Building responsive websites, dashboards, and applications using React.js, TypeScript, and React Native while focusing on reusable components, API integrations, and smooth user experience.",
+          "Building responsive websites, dashboards, and applications using React.js, TypeScript, and React Native with a focus on clean UI and smooth user experience.",
+        bullets: [
+          "Develop reusable frontend components and integrate APIs for fast, scalable products.",
+          "Convert UI/UX designs into clean, maintainable, and scalable frontend code.",
+          "Debug frontend issues, participate in code reviews, and follow coding best practices.",
+          "Collaborate with designers and backend developers in an Agile environment."
+        ],
         tags: ["React.js", "TypeScript", "React Native", "APIs"]
       },
       {
@@ -175,16 +218,12 @@ const portfolioData = {
         meta: "Professional Experience",
         description:
           "Developed responsive web applications in React, integrated RESTful APIs, and worked on authentication, CRUD features, debugging, and data visualization interfaces.",
+        bullets: [
+          "Built real-time data interactions through RESTful API integration.",
+          "Worked with backend teams on API design and frontend feature implementation.",
+          "Fixed UI bugs, broken layouts, and errors while improving team communication."
+        ],
         tags: ["React", "REST APIs", "Git", "Debugging"]
-      },
-      {
-        date: "Jan 2024 - Jun 2024",
-        title: "Front-end Developer",
-        company: "Poodles Petcare Pvt Ltd",
-        meta: "Professional Experience",
-        description:
-          "Created clean, responsive interfaces with reusable UI components, used Axios for dynamic data integration, and resolved UI issues while aligning with product requirements.",
-        tags: ["Responsive UI", "Axios", "Components"]
       },
       {
         date: "2020 - 2024",

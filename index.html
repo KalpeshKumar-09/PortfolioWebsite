@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -31,6 +31,10 @@
         <div class="nav-inner">
           <div class="nav-logo" data-brand-logo>KK<span>.</span></div>
           <ul class="nav-links" id="navLinks"></ul>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+            <span class="theme-icon theme-sun">☀</span>
+            <span class="theme-icon theme-moon">☾</span>
+          </button>
           <button class="burger" id="burger" aria-label="menu">
             <span></span><span></span><span></span>
           </button>
@@ -70,17 +74,6 @@
             style="--d: 0.8s"
             id="heroStats"
           ></div>
-        </div>
-        <div class="hero-visual reveal-right" style="--d: 0.4s">
-          <div class="hero-card">
-            <div class="hc-header">
-              <span class="hc-dot red"></span><span class="hc-dot yellow"></span
-              ><span class="hc-dot green"></span>
-              <span class="hc-title" id="heroCardTitle"></span>
-            </div>
-            <div class="hc-code" id="heroCode"></div>
-            <div class="hc-footer" id="heroCodeTags"></div>
-          </div>
         </div>
         <div class="scroll-indicator">
           <span>Scroll</span>
